@@ -8,7 +8,7 @@
 <title>book shop</title>
 </head>
 <body ng-app="app">
-	<div ng-controller="bookController">
+	<div ng-controller="bookController" class="col-lg-6">
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -25,16 +25,17 @@
 					<td>{{book.author}}</td>
 					<td>{{book.title}}</td>
 					<td><span></span></td>
-					<td><button type="button" ng-click="removeItem(book)" class="btn btn-sm btn-danger">
-					<i class="glyphicon glyphicon-remove-circle">
-					</i>
-				</button></td>
+					<td><button type="button" ng-click="removeItem(book)"
+							class="btn btn-sm btn-danger">
+							<i class="glyphicon glyphicon-remove-circle"> </i>
+						</button></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </body>
 <script type="text/javascript" src="resources/js/angular.js"></script>
+<script type="text/javascript" src="resources/js/angular-resource.js"></script>
 <script type="text/javascript" src="resources/js/app.js"></script>
 <script type="text/javascript" src="resources/js/controller.js"></script>
 </html>

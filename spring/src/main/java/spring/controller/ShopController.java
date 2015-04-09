@@ -23,7 +23,7 @@ public class ShopController {
 
 	@RequestMapping(value = "rest/getAllBooks", method = RequestMethod.GET)
 	public @ResponseBody ArrayList<Book> getBooks() {
-
+		books = new ArrayList<Book>();
 		Book book = new Book("Azbuka", "Millar", "Kingsman");
 		Book book2 = new Book("Komilfo", "Istman", "Turtles");
 		books.add(book);
@@ -31,15 +31,17 @@ public class ShopController {
 		return books;
 	}
 
-	@RequestMapping(value = "rest/delete", method = RequestMethod.POST)
+	@RequestMapping(value = "rest/delete", method = RequestMethod.DELETE)
 	public void delete(@RequestBody Book book) {
+
 		if (book == null) {
 			System.out.println("null");
+		} else {
+			System.out.println(book.getAuthor());
 		}
-		System.out.println(book.getAuthor());
-		
+		System.out.println(books.indexOf(book));
 		books.remove(book);
-		
+		System.out.println(books.size());
 	}
 
 }
