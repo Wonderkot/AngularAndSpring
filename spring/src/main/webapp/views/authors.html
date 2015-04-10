@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Список авторов</title>
+<table class="table table-striped">
+	<thead>
+		<tr>			
+			<th>Автор</th>			
+			<th>Редактировать</th>
+			<th>Удалить</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="author in authors">
+			<td>{{author.name}}</td>			
+			<td><span></span></td>
+			<td><button type="button" ng-click="removeItem(book)"
+					class="btn btn-sm btn-danger">
+					<i class="glyphicon glyphicon-remove-circle"> </i>
+				</button></td>
+		</tr>
+	</tbody>
+</table>

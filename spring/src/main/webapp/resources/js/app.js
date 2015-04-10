@@ -2,16 +2,16 @@ var app = angular.module('app', [ 'Controllers', 'ngRoute' ]);
 
 app.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.when('/', {
-		templateUrl : 'views/books.jsp',
+		templateUrl : 'views/books.html',
 		controller : 'bookController'
 	}).when('/books/', {
-		templateUrl : 'views/books.jsp',
+		templateUrl : 'views/books.html',
 		controller : 'bookController'
 	}).when('/pulishers/', {
-		templateUrl : 'views/pulishers.jsp',
+		templateUrl : 'views/publishers.html',
 		controller : 'bookController'
 	}).when('/authors/', {
-		templateUrl : 'views/authors.jsp',
+		templateUrl : 'views/authors.html',
 	controller : 'bookController'
 })
 } ]);
